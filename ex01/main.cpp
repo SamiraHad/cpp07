@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "iter.hpp"
+# include <cstdlib>
 
 template <typename T>
 void print(const T &x)

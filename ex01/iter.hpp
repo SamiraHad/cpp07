@@ -17,22 +17,23 @@
 #include <string>
 #include <cctype>
 #include <iomanip>
+#include <cstddef>
 
 template <typename T, typename F>
-void iter(T *array, const int len, F function)
+void iter(T *array, const size_t len, F *function)
 {
     if(!array)
         return;
-    for (int i = 0; i < len; i++)
+    for (size_t i = 0; i < len; i++)
         function(array[i]);
 }
 
 template <typename T, typename F>
-void iter(const T *array, const int len, F function)
+void iter(const T *array, const size_t len, F *function) // void (*function) (T cont &)
 {
     if(!array)
         return;
-    for (int i = 0; i < len; i++)
+    for (size_t i = 0; i < len; i++)
         function(array[i]);
 }
 
