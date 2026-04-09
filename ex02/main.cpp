@@ -59,9 +59,6 @@ int main(int, char**)
         std::cerr << e.what() << '\n';
     }
     
-
-
-
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
@@ -69,6 +66,7 @@ int main(int, char**)
     delete [] mirror;//
     return 0;
 }
+
 
 
 // void printTitle(const std::string &s)
