@@ -20,7 +20,7 @@
 #include <cstddef>
 
 template <typename T, typename F>
-void iter(T *array, const size_t len, F *function)
+void iter(T *array, const size_t len, F function)
 {
     if(!array)
         return;
@@ -29,7 +29,7 @@ void iter(T *array, const size_t len, F *function)
 }
 
 template <typename T, typename F>
-void iter(const T *array, const size_t len, F *function) // void (*function) (T cont &)
+void iter(const T *array, const size_t len, F function) // void (*function) (T cont &)
 {
     if(!array)
         return;

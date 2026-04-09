@@ -20,12 +20,14 @@
 #include <cstddef>
 #include <exception>
 
+
+
 template <typename T>
 class Array
 {
     private:
         T* _data;
-        unsigned int _size;
+        unsigned int _n;
 
     public:
         Array();
@@ -41,3 +43,60 @@ class Array
 };
 
 #endif
+
+template <typename T>
+Array<T>::Array() : _data(NULL), _n(0) {}
+
+template <typename T>
+Array<T>::Array(unsigned int n) : _data(n > 0 ? new T[n]() : NULL), _n(n) {}
+
+template <typename T>
+Array<T>::Array( const Array& other ) : _data(other._n > 0 ? new T[other._n]() : NULL), _n(other._n)
+                                    //copier la taille, allocation 
+{
+    for(unsigned int i = 0; i < other._n; i++)
+        _data[i] = other._data[i]; // copier element par element
+}
+
+
+template <typename T>
+Array<T>& Array<T>::operator=( const Array& other )
+{
+    if(this != &other)
+    {
+        delete[] _data; // liberer l'ancienne memoire
+        _n = other._n; //copier la taille
+        _data = new T[_n](); //allouer une nouvelle memoire
+        for(unsigned int i = 0; i < other._n; i++)
+            _data[i] = other._data[i]; // copier element par element
+    }
+    return(*this);
+}
+
+template <typename T>
+Array<T>::~Array()
+{
+    delete [] _data;
+}
+
+template <typename T>
+T& Array<T>::operator[](unsigned int index)
+{
+    if(index >= _n)
+        throw std::exception();
+    return _data[index];
+}
+
+template <typename T>
+const T& Array<T>::operator[](unsigned int index) const
+{
+    if(index >= _n)
+        throw std::exception();
+    return _data[index];
+}
+
+template <typename T>
+unsigned int Array<T>::size() const
+{
+        return _n;
+}
