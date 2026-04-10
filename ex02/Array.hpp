@@ -45,7 +45,7 @@ class Array
 #endif
 
 template <typename T>
-Array<T>::Array() : _data(new[0]), _n(0) {}
+Array<T>::Array() : _data(new T[0]), _n(0) {}
 
 template <typename T>
 Array<T>::Array(unsigned int n) : _data(new T[n]()), _n(n) {}
