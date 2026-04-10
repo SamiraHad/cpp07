@@ -25,10 +25,15 @@ Elle prend un tableau, sa taille et une fonction.
 
 On fait deux versions, une (T*) pour modifier les elements et une autre const (const T*) pour ne pas les modifier.
 
-exemple: int tab[3] = {1, 2, 3};                      print(1)
-         iter(tab, 3, print);           ====>         print(2)
-                                                      print(3)
-         
+exemple: 
+
+int tab[3] = {1, 2, 3};                      
+iter(tab, 3, print);  
+
+=======> print(1)
+         print(2)
+         print(3)
+                                                       
 
 
 
