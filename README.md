@@ -37,6 +37,21 @@ print(1)
 print(2)
 
 print(3)
+
+
+EX02:
+
+Dans cet exercice on cree une classe template Array qui peut stocker n'importe quel type.
+
+Dans l’operator=, on alloue une nouvelle memoire puis on copie les elements un par un, c’est ce qu’on appelle 
+
+une deep copy, parce que chaque objet a sa propre memoire.
+
+Sinon si on copie juste le pointeur, on aura une shallow copy(meme memoire) et les deux objets vont partager
+
+la meme memoire
+
+
                                                        
 
 
