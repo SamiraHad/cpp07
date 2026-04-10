@@ -61,9 +61,9 @@ operator[] sert a acceder aux elements du tableau.
 
 On fait deux versions de operator[] pour pouvoir utiliser le tableau avec des objets const et non const.
 
-  operator= → copier
+  operator= → copier un objet                  ===>  b = a;   donc b.operator=(a);
 
-  operator[] → accéder
+  operator[] → accéder au tableau              ===> Array<int> a(3);    a[0] = 10;   donc   a.operator = 10;
 
   T&        → modifier
 
