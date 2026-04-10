@@ -55,19 +55,11 @@ la meme memoire.
 
 Remarque:
 
-operator= sert a copier un objet.
+operator= sert a copier un objet.                     ===>  b = a;   donc b.operator=(a);
 
-operator[] sert a acceder aux elements du tableau.
+operator[] sert a acceder aux elements du tableau.    ===> Array<int> a(3);    a[0] = 10;   donc   a.operator = 10;
 
-On fait deux versions de operator[] pour pouvoir utiliser le tableau avec des objets const et non const.
-
-  operator= → copier un objet                  ===>  b = a;   donc b.operator=(a);
-
-  operator[] → accéder au tableau              ===> Array<int> a(3);    a[0] = 10;   donc   a.operator = 10;
-
-  T&        → modifier
-
-  const T&  → lire seulement
+On fait deux versions de operator[] pour pouvoir utiliser le tableau avec des objets const et non const.           
 
 
 
