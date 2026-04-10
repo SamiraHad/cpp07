@@ -45,13 +45,13 @@ class Array
 #endif
 
 template <typename T>
-Array<T>::Array() : _data(NULL), _n(0) {}
+Array<T>::Array() : _data(new[0]), _n(0) {}
 
 template <typename T>
-Array<T>::Array(unsigned int n) : _data(n > 0 ? new T[n]() : NULL), _n(n) {}
+Array<T>::Array(unsigned int n) : _data(new T[n]()), _n(n) {}
 
 template <typename T>
-Array<T>::Array( const Array& other ) : _data(other._n > 0 ? new T[other._n]() : NULL), _n(other._n)
+Array<T>::Array( const Array& other ) : _data(new T[other._n]()), _n(other._n)
                                     //copier la taille, allocation 
 {
     for(unsigned int i = 0; i < other._n; i++)
