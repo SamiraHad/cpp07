@@ -1,10 +1,12 @@
 # cpp07
 cpp07
 
-template est une fonction ou classe générique qui fonctionne avec plusieurs types.
+Un template est une fonction ou classe generique qui fonctionne avec plusieurs types sans changer le code. On le met dans le .hpp parce que le compilateur doit voir son implementation quand il l'utilise avec un type.
 
 
-EX00: Dans cet exercice on cree des fonctions template qui marchent avec plusieurs types.
+EX00: 
+
+Dans cet exercice on cree des fonctions template qui marchent avec plusieurs types.
 
 swap echange deux valeurs sans rien retourner.
 
