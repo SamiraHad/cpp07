@@ -39,6 +39,7 @@ print(2)
 print(3)
 
 
+
 EX02:
 
 Dans cet exercice on cree une classe template Array qui peut stocker n'importe quel type.
@@ -50,6 +51,24 @@ C’est ce qu’on appelle une deep copy c'est a dire chaque objet a sa propre m
 Si on copie juste le pointeur, on aura une shallow copy c'est a dire les deux objets vont partager
 
 la meme memoire.
+
+
+Remarque:
+
+operator= sert a copier un objet.
+
+operator[] sert a acceder aux elements du tableau.
+
+On fait deux versions de operator[] pour pouvoir utiliser le tableau avec des objets const et non const.
+
+  operator= → copier
+
+  operator[] → accéder
+
+  T&        → modifier
+
+  const T&  → lire seulement
+
 
 
                                                        
